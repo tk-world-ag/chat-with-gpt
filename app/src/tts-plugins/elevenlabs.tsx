@@ -206,7 +206,8 @@ export default class ElevenLabsPlugin extends TTSPlugin<ElevenLabsPluginOptions>
             headers: this.createHeaders(),
             method: 'POST',
             body: JSON.stringify({
-                text,
+                "text": text,
+                "model_id": "eleven_multilingual_v2"
             }),
         });
 
