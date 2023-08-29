@@ -62,6 +62,8 @@ export default class ChatServer {
             configurePassport(this);
         }
 
+        this.app.set('trust proxy', '192.168.111.117');
+
         this.app.use(express.json({ limit: '1mb' }));
         this.app.use(compression({
             filter: (req, res) => !req.path.includes("proxies"),
